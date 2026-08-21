@@ -1,4 +1,4 @@
-```markdown
+
 # OpenModelica Simulation Runner
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
@@ -8,7 +8,10 @@
 
 A professional desktop application for running OpenModelica simulations with a user-friendly graphical interface. Built with Python and PyQt6, this application simplifies the process of executing compiled OpenModelica models with custom parameters.
 
-## ✨ Features
+<br>
+
+# ✨ **FEATURES**
+---
 
 - 🖥️ **Intuitive GUI**: Clean, modern interface built with PyQt6
 - 📁 **File Browser**: Easy selection of OpenModelica executables
@@ -21,7 +24,10 @@ A professional desktop application for running OpenModelica simulations with a u
 - 🔧 **CLI Support**: Run with command-line arguments for automation
 - 📝 **Logging**: Detailed output logging for debugging
 
-## 📋 Requirements
+<br>
+
+# 📋 **REQUIREMENTS**
+---
 
 | Requirement | Version | Purpose |
 |------------|---------|---------|
@@ -30,9 +36,12 @@ A professional desktop application for running OpenModelica simulations with a u
 | OpenModelica | Latest | Model compilation |
 | OS | Windows 10/11 or Linux | Platform |
 
-## 🚀 Quick Start
+<br>
 
-### 1. Installation
+# 🚀 **QUICK START**
+---
+
+### **1. Installation**
 
 ```bash
 # Clone the repository
@@ -41,16 +50,16 @@ cd openmodelica-gui
 
 # Install dependencies
 pip install -r requirements.txt
-```
 
-### 2. Prepare OpenModelica Executable
+
+### **2. Prepare OpenModelica Executable**
 
 1. Install [OpenModelica](https://openmodelica.org/)
 2. Open OMEdit and load your model
 3. Compile the model to generate an executable
 4. Note the executable location
 
-### 3. Run the Application
+### **3. Run the Application**
 
 ```bash
 # GUI Mode
@@ -60,9 +69,12 @@ python main.py
 python main.py /path/to/executable 0 4
 ```
 
-## 📖 Usage Guide
+<br>
 
-### GUI Interface
+# 📖 **USAGE GUIDE**
+---
+
+### **GUI Interface**
 
 1. **Select Executable**: Click "Browse" and navigate to your compiled OpenModelica executable
 2. **Set Parameters**:
@@ -72,7 +84,7 @@ python main.py /path/to/executable 0 4
 4. **Monitor Progress**: View real-time output in the display area
 5. **Check Results**: Review simulation output and status
 
-### Input Constraints
+### **Input Constraints**
 
 ```
 Start Time: 0 ≤ start < 5 (integer)
@@ -80,7 +92,7 @@ Stop Time:  start < stop < 5 (integer)
 Valid Range: 0 ≤ start < stop < 5
 ```
 
-### Command Line Arguments
+### **Command Line Arguments**
 
 ```bash
 python main.py [executable_path] [start_time] [stop_time]
@@ -92,7 +104,10 @@ python main.py ./model/TwoConnectedTanks 0 4
 python main.py /usr/local/bin/model 1 3
 ```
 
-## 🏗️ Project Structure
+<br>
+
+# 🏗️ **PROJECT STRUCTURE**
+---
 
 ```
 openmodelica-gui/
@@ -115,7 +130,10 @@ openmodelica-gui/
     └── TwoConnectedTanks.mat
 ```
 
-## 🧪 Testing
+<br>
+
+# 🧪 **TESTING**
+---
 
 Run the comprehensive test suite:
 
@@ -131,7 +149,10 @@ coverage run -m pytest tests/
 coverage report
 ```
 
-## 🎯 Code Quality
+<br>
+
+# 🎯 **CODE QUALITY**
+---
 
 This project follows:
 
@@ -142,9 +163,12 @@ This project follows:
 - **Design Patterns**: Signal-slot pattern for loose coupling
 - **Error Handling**: Comprehensive exception management
 
-## 🔍 OOP Implementation
+<br>
 
-### Classes
+# 🔍 **OOP IMPLEMENTATION**
+---
+
+### **Classes**
 
 | Class | Purpose | Key Methods |
 |-------|---------|-------------|
@@ -152,7 +176,7 @@ This project follows:
 | `ProcessRunner` | Process management | `start()`, `terminate()`, `is_running()` |
 | `InputValidator` | Input validation | `validate_time_range()`, `parse_arguments()` |
 
-### Design Principles
+### **Design Principles**
 
 - **Single Responsibility**: Each class has a focused purpose
 - **Open/Closed**: Extensible without modification
@@ -160,9 +184,12 @@ This project follows:
 - **Interface Segregation**: Clean, focused interfaces
 - **DRY**: No code duplication
 
-## 🛠️ Technical Details
+<br>
 
-### OpenModelica Integration
+# 🛠️ **TECHNICAL DETAILS**
+---
+
+### **OpenModelica Integration**
 
 The application passes parameters using OpenModelica's simulation flags:
 
@@ -170,7 +197,7 @@ The application passes parameters using OpenModelica's simulation flags:
 executable -override=startTime=X,stopTime=Y -r=results.json
 ```
 
-### Process Management
+### **Process Management**
 
 Uses Qt's `QProcess` for:
 - Asynchronous execution
@@ -178,7 +205,7 @@ Uses Qt's `QProcess` for:
 - Proper resource cleanup
 - Cross-platform compatibility
 
-### Error Handling
+### **Error Handling**
 
 Handles:
 - Invalid file paths
@@ -187,9 +214,12 @@ Handles:
 - Runtime errors
 - User input validation
 
-## 📚 API Documentation
+<br>
 
-### MainWindow Class
+# 📚 **API DOCUMENTATION**
+---
+
+### **MainWindow Class**
 
 ```python
 class MainWindow(QMainWindow):
@@ -202,7 +232,7 @@ class MainWindow(QMainWindow):
         """Validate input time range."""
 ```
 
-### ProcessRunner Class
+### **ProcessRunner Class**
 
 ```python
 class ProcessRunner(QObject):
@@ -215,7 +245,7 @@ class ProcessRunner(QObject):
         """Terminate running process."""
 ```
 
-### InputValidator Class
+### **InputValidator Class**
 
 ```python
 class InputValidator:
@@ -226,7 +256,10 @@ class InputValidator:
         """Validate time range."""
 ```
 
-## 🤝 Contributing
+<br>
+
+# 🤝 **CONTRIBUTING**
+---
 
 1. Fork the repository
 2. Create feature branch (`git checkout -b feature/AmazingFeature`)
@@ -234,9 +267,12 @@ class InputValidator:
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open Pull Request
 
-## 🐛 Troubleshooting
+<br>
 
-### Common Issues
+# 🐛 **TROUBLESHOOTING**
+---
+
+### **Common Issues**
 
 **Q: PyQt6 installation fails**
 ```bash
@@ -259,27 +295,42 @@ dumpbin /dependents model/TwoConnectedTanks.exe  # Windows
 - Values must be integers
 - Range: 0 ≤ start < stop < 5
 
-## 📄 License
+<br>
+
+# 📄 **LICENSE**
+---
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
 
-## 👥 Authors
+<br>
+
+# 👥 **AUTHORS**
+---
 
 - **FOSSEE Screening Task** - *Initial work*
 
-## 🙏 Acknowledgments
+<br>
+
+# 🙏 **ACKNOWLEDGMENTS**
+---
 
 - OpenModelica Development Team
 - PyQt6 Documentation
 - FOSSEE Project
 
-## 📞 Contact
+<br>
+
+# 📞 **CONTACT**
+---
 
 For questions and support:
 - Email: contact-om@fossee.in
 - Project Link: [https://github.com/yourusername/openmodelica-gui](https://github.com/yourusername/openmodelica-gui)
 
-## 🎯 Evaluation Criteria Met
+<br>
+
+# 🎯 **EVALUATION CRITERIA MET**
+---
 
 ✅ **Complexity and Coding Standards**
 - Clean, Pythonic code following PEP 8
